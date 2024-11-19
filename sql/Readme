@@ -1,0 +1,18 @@
+//查看所有数据库的列表
+SHOW DATABASES;
+
+//查看某个指定数据库的内容（即该数据库中的所有表），先切换到该数据库，然后查看它包含的表
+USE BandBooking;
+SHOW TABLES;
+
+// 查看某个具体表
+DESCRIBE Band;
+
+//查看表中的数据
+SELECT BandName FROM Band; //查询单个属性
+SELECT BandName, NumberOfMembers FROM Band; //查询多个属性
+SELECT * FROM table_name; //显示表中的所有数据
+SELECT * FROM table_name LIMIT 10; //显示前10条
+
+//删除表的一个属性
+ALTER TABLE Band_Booking DROP COLUMN Headlining;
